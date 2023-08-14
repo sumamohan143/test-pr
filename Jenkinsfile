@@ -13,7 +13,7 @@ pipeline {
                     echo "PR Number: ${prNumber}"
                     
                     // Fetch and checkout the pull request branch
-                    sh "git fetch origin pull/${prNumber}/head:${prNumber}"
+                    sh "git fetch origin pull/${prNumber}/merge:${prNumber}"
                     sh "git checkout ${prNumber}"
                 }
             }
